@@ -1,6 +1,16 @@
-﻿Console.Write("Ange textsträng: ");
+﻿using System.Numerics;
+using System.Text.RegularExpressions;
+
+Console.Write("Ange textsträng: ");
 string userInput = Console.ReadLine();
 string input = userInput.ToLower().Replace(" ", string.Empty).Trim();
+
+string onlyDigts = new String(userInput.Where(Char.IsDigit).ToArray());
+
+Console.WriteLine(onlyDigts);
+
+Console.WriteLine("----------------------------");
+
 
 char[] inputChar = input.ToCharArray();
 char[] outputChar = new char[inputChar.Length];

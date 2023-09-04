@@ -1,12 +1,12 @@
-﻿string s = "This is a string";
-var duplicates = new List<char>();
-foreach (var item in s)
+﻿string a = "str123";
+string b = string.Empty;
+int val;
+
+for (int i = 0; i < a.Length; i++)
 {
-    if (s.IndexOf(item) != s.LastIndexOf(item) &&
-        !duplicates.Contains(item))
-    {
-        duplicates.Add(item);
-    }
+    if (Char.IsDigit(a[i]))
+        b += a[i];
 }
 
-Console.WriteLine(string.Join(",", duplicates));
+if (b.Length > 0)
+    val = int.Parse(b);
