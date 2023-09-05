@@ -24,10 +24,9 @@ while (true)
     string[] substrings = new string[input.Length];
     int counter = 0;
 
-    for (int o = 0; o < substrings.Length; o++)
-    {
+    while (true)
+    { 
         counter++;
-
         for (int i = 0; i < isDigit.Length; i++)
         {
             if (isDigit[i] == false)
@@ -314,5 +313,5 @@ while (true)
             Console.WriteLine(substrings[i]);
         }
         Console.ReadKey();
-    }    
+    }   
 }
