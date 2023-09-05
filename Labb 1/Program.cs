@@ -19,11 +19,12 @@ for (int i = 0; i < chars.Length; i++)
     digits[i] = Convert.ToString(chars[i]);
 }
 
-while (true)
+string[] substrings = new string[input.Length];
+int counter = 0;
+int runCounter = isDigit.Length;
+while (runCounter >= -1)
 {
-    string[] substrings = new string[input.Length];
-    int counter = 0;
-
+    runCounter++;
     while (true)
     { 
         counter++;
@@ -307,11 +308,21 @@ while (true)
                 }
             }
         }
-        Console.WriteLine("Resultat: ");
-        for (int i = 0; i < substrings.Length; i++)
-        {
-            Console.WriteLine(substrings[i]);
-        }
-        Console.ReadKey();
-    }   
+        
+        break;
+    }
+    Console.WriteLine("Resultat: ");
+    for (int i = 0; i < substrings.Length; i++)
+    {
+        Console.WriteLine(substrings[i]);
+    }
+    //Console.ReadKey();
+    //if (isDigit.Length) //någonting för att bryta loopen om den kört lika många gånger som det finns sekvenser
+    //{
+    //    break;
+    //}
+    //else
+    //{
+    //    continue;
+    //}
 }
