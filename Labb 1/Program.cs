@@ -19,296 +19,294 @@ for (int i = 0; i < chars.Length; i++)
     digits[i] = Convert.ToString(chars[i]);
 }
 
-string[] substrings = new string[input.Length];
-int counter = 0;
 while (true)
 {
-    for (int o = 0; o < input.Length; o++)
+    string[] substrings = new string[input.Length];
+    int counter = 0;
+
+    for (int o = 0; o < substrings.Length; o++)
     {
         counter++;
-        while (true)
+
+        for (int i = 0; i < isDigit.Length; i++)
         {
-            for (int i = 0; i < isDigit.Length; i++)
+            if (isDigit[i] == false)
             {
-                if (isDigit[i] == false)
+                continue;
+            }
+            else if (isDigit[i] == true)
+            {
+                if (digits[i] == "0")
                 {
-                    continue;
+                    if (substrings[counter] == null)
+                    {
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("0"))
+                        {
+                            if (substrings[counter].StartsWith("0"))
+                            {
+                                substrings[counter] += digits[i];
+                                break;
+                            }
+                            else if (!substrings[counter].StartsWith("0"))
+                            {
+                                substrings[counter] += digits[i];
+                            }
+                        }
+                        else if (!substrings[counter].Contains("0"))
+                        {
+                            substrings[counter] += digits[i];
+                        }
+                    }
                 }
-                else if (isDigit[i] == true)
+                else if (digits[i] == "1")
                 {
-                    if (digits[i] == "0")
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("1"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("0"))
+                            if (substrings[counter].StartsWith("1"))
                             {
-                                if (substrings[counter].StartsWith("0"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("0"))
-                                {
-                                    substrings[counter] += digits[i];                                    
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("0"))
+                            else if (!substrings[counter].StartsWith("1"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("1"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "1")
+                }
+                else if (digits[i] == "2")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("2"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("1"))
+                            if (substrings[counter].StartsWith("2"))
                             {
-                                if (substrings[counter].StartsWith("1"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("1"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("1"))
+                            else if (!substrings[counter].StartsWith("2"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("2"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "2")
+                }
+                else if (digits[i] == "3")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("3"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("2"))
+                            if (substrings[counter].StartsWith("3"))
                             {
-                                if (substrings[counter].StartsWith("2"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("2"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("2"))
+                            else if (!substrings[counter].StartsWith("3"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("3"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "3")
+                }
+                else if (digits[i] == "4")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("4"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("3"))
+                            if (substrings[counter].StartsWith("4"))
                             {
-                                if (substrings[counter].StartsWith("3"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("3"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("3"))
+                            else if (!substrings[counter].StartsWith("4"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("4"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "4")
+                }
+                else if (digits[i] == "5")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("5"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("4"))
+                            if (substrings[counter].StartsWith("5"))
                             {
-                                if (substrings[counter].StartsWith("4"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("4"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("4"))
+                            else if (!substrings[counter].StartsWith("5"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("5"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "5")
+                }
+                else if (digits[i] == "6")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("6"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("5"))
+                            if (substrings[counter].StartsWith("6"))
                             {
-                                if (substrings[counter].StartsWith("5"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("5"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("5"))
+                            else if (!substrings[counter].StartsWith("6"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("6"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "6")
+                }
+                else if (digits[i] == "7")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("7"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("6"))
+                            if (substrings[counter].StartsWith("7"))
                             {
-                                if (substrings[counter].StartsWith("6"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("6"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("6"))
+                            else if (!substrings[counter].StartsWith("7"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("7"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "7")
+                }
+                else if (digits[i] == "8")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
+                        substrings[counter] += digits[i];
+                        continue;
+                    }
+                    else
+                    {
+                        if (substrings[counter].Contains("8"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("7"))
+                            if (substrings[counter].StartsWith("8"))
                             {
-                                if (substrings[counter].StartsWith("7"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("7"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("7"))
+                            else if (!substrings[counter].StartsWith("8"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("8"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
-                    else if (digits[i] == "8")
+                }
+                else if (digits[i] == "9")
+                {
+                    if (substrings[counter] == null)
                     {
-                        if (substrings[counter] == null)
-                        {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("8"))
-                            {
-                                if (substrings[counter].StartsWith("8"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("8"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
-                            }
-                            else if (!substrings[counter].Contains("8"))
-                            {
-                                substrings[counter] += digits[i];
-                            }
-                        }
+                        substrings[counter] += digits[i];
+                        continue;
                     }
-                    else if (digits[i] == "9")
+                    else
                     {
-                        if (substrings[counter] == null)
+                        if (substrings[counter].Contains("9"))
                         {
-                            substrings[counter] += digits[i];
-                            continue;
-                        }
-                        else
-                        {
-                            if (substrings[counter].Contains("9"))
+                            if (substrings[counter].StartsWith("9"))
                             {
-                                if (substrings[counter].StartsWith("9"))
-                                {
-                                    substrings[counter] += digits[i];
-                                    break;
-                                }
-                                else if (!substrings[counter].StartsWith("9"))
-                                {
-                                    substrings[counter] += digits[i];
-                                }
+                                substrings[counter] += digits[i];
+                                break;
                             }
-                            else if (!substrings[counter].Contains("9"))
+                            else if (!substrings[counter].StartsWith("9"))
                             {
                                 substrings[counter] += digits[i];
                             }
+                        }
+                        else if (!substrings[counter].Contains("9"))
+                        {
+                            substrings[counter] += digits[i];
                         }
                     }
                 }
             }
-            break;
         }
         Console.WriteLine("Resultat: ");
         for (int i = 0; i < substrings.Length; i++)
@@ -316,7 +314,5 @@ while (true)
             Console.WriteLine(substrings[i]);
         }
         Console.ReadKey();
-    }
-
-    
+    }    
 }
