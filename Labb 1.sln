@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 1", "Labb 1\Labb 1.csproj", "{AE9019F7-7AFC-4B83-BD31-90CBD0321456}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labb 1", "Labb 1\Labb 1.csproj", "{AE9019F7-7AFC-4B83-BD31-90CBD0321456}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 1 - Slask", "Labb 1 - Slask\Labb 1 - Slask.csproj", "{5E187591-383C-47B1-8659-D6D36E8B85B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labb 1 - Slask", "Labb 1 - Slask\Labb 1 - Slask.csproj", "{5E187591-383C-47B1-8659-D6D36E8B85B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 1 - Testkod", "Labb 1 - Testkod\Labb 1 - Testkod.csproj", "{07A2FA5C-AC11-44E6-B5F8-DDDDC387EA43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5E187591-383C-47B1-8659-D6D36E8B85B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E187591-383C-47B1-8659-D6D36E8B85B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E187591-383C-47B1-8659-D6D36E8B85B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A2FA5C-AC11-44E6-B5F8-DDDDC387EA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A2FA5C-AC11-44E6-B5F8-DDDDC387EA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A2FA5C-AC11-44E6-B5F8-DDDDC387EA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A2FA5C-AC11-44E6-B5F8-DDDDC387EA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
