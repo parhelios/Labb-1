@@ -316,8 +316,11 @@ while (runCounter >= -1)
     {
         Console.WriteLine(substrings[i]);
     }
+
+    //någonting för att bryta loopen om den kört lika många gånger som det finns sekvenser
+    //samt något för att ignorera sekvenser som är kortare än 3 siffror
     //Console.ReadKey();
-    //if (isDigit.Length) //någonting för att bryta loopen om den kört lika många gånger som det finns sekvenser
+    //if (isDigit.Length) 
     //{
     //    break;
     //}
