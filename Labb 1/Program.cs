@@ -18,6 +18,7 @@ for (int i = 0; i < chars.Length; i++)
     digits[i] = Convert.ToString(chars[i]);
 }
 
+//ghettolösning
 for (int i = 0; i < substrings.Length; i++)
 {
     substrings[i] = string.Empty;
