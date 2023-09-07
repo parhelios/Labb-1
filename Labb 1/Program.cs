@@ -55,3 +55,4 @@ for (int i = 0; i < userInput.Length; i++)
 Console.WriteLine();
 Console.WriteLine("Totalsumma: " + counter);
 Console.ReadKey();
+
