@@ -1,12 +1,12 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-Console.Write("Ange textsträng: ");
+﻿Console.Write("Ange textsträng: ");
 string userInput = Console.ReadLine();
 string input = userInput.Replace(" ", string.Empty).Trim();
 
 bool[] isDigit = new bool[input.Length];
 string[] digits = new string[input.Length];
 char[] chars = input.ToCharArray();
+string[] substrings = new string[input.Length];
+
 
 for (int i = 0; i < input.Length; i++)
 {
@@ -18,7 +18,11 @@ for (int i = 0; i < chars.Length; i++)
     digits[i] = Convert.ToString(chars[i]);
 }
 
-string[] substrings = new string[input.Length];
+for (int i = 0; i < substrings.Length; i++)
+{
+    substrings[i] = string.Empty;
+}
+
 int counter = -1;
 //int runCounter = isDigit.Length;
 //runCounter++;
@@ -35,7 +39,7 @@ while (true)
         {
             if (digits[i] == "0")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -62,7 +66,7 @@ while (true)
             }
             else if (digits[i] == "1")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -89,7 +93,7 @@ while (true)
             }
             else if (digits[i] == "2")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -116,7 +120,7 @@ while (true)
             }
             else if (digits[i] == "3")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -143,7 +147,7 @@ while (true)
             }
             else if (digits[i] == "4")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -170,7 +174,7 @@ while (true)
             }
             else if (digits[i] == "5")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -197,7 +201,7 @@ while (true)
             }
             else if (digits[i] == "6")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -224,7 +228,7 @@ while (true)
             }
             else if (digits[i] == "7")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -251,7 +255,7 @@ while (true)
             }
             else if (digits[i] == "8")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
@@ -278,7 +282,7 @@ while (true)
             }
             else if (digits[i] == "9")
             {
-                if (substrings[counter] == null)
+                if (substrings[counter] == String.Empty)
                 {
                     substrings[counter] += digits[i];
                     continue;
