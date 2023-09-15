@@ -40,7 +40,7 @@ for (int i = 0; i < userInput.Length; i++)
                 //i start, j slut, anv Substring istället för Split
 
                 preSequence = userInput.Substring(0, i);
-                postSequence = userInput.Substring (j, (userInput.Length - preSequence.Length - substring.Length));
+                postSequence = userInput.Substring (j+1, (userInput.Length - preSequence.Length - substring.Length));
 
                 Console.Write(preSequence);
                 Console.ForegroundColor = ConsoleColor.Red;
